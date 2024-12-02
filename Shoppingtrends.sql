@@ -146,3 +146,12 @@ AS Regular_shoppers FROM shopping_trends GROUP BY "Location" ORDER BY "Location"
 -- Shoppers that have subscriptions versus those who don't
 SELECT COUNT(CASE WHEN "Subscription Status" = 'Yes' THEN 1 END) AS Sub, 
 COUNT(CASE WHEN "Subscription Status" = 'No' THEN 1 END) AS No_sub FROM shopping_trends;
+
+--How many purchases got a discount by applying promo code
+SELECT COUNT(CASE WHEN "Discount Applied " = 'Yes' AND "Promo Code Used " = 'Yes' THEN 1 END) AS discount,
+COUNT(*) AS total FROM shopping_trends;
+
+-- Percentage of people using discounts under the age of 50 vs percentage 50 and over
+SELECT COUNT(CASE WHEN "Discount Applied " = 'Yes' AND "Age" < 50 THEN 1 END)*100.0/COUNT(CASE WHEN "Age"<50 THEN 1 END) AS Young,
+COUNT(CASE WHEN "Discount Applied " = 'Yes' AND "Age" >= 50 THEN 1 END)*100.0/COUNT(CASE WHEN "Age" >= 50 THEN 1 END) AS Not_young 
+FROM shopping_trends;
