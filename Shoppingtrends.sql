@@ -144,3 +144,5 @@ SELECT "Location", SUM(CASE WHEN "Frequency of Purchases" = 'Weekly' AND "Previo
 AS Regular_shoppers FROM shopping_trends GROUP BY "Location" ORDER BY "Location";
 
 -- Shoppers that have subscriptions versus those who don't
+SELECT COUNT(CASE WHEN "Subscription Status" = 'Yes' THEN 1 END) AS Sub, 
+COUNT(CASE WHEN "Subscription Status" = 'No' THEN 1 END) AS No_sub FROM shopping_trends;
