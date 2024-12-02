@@ -21,6 +21,8 @@ CREATE TABLE IF NOT EXISTS public.shopping_trends
     "Frequency of Purchases" text
 )
 
+--ADDED DATA THROUGH POSTGRES USER INTERFACE--
+
 
 -- INFORMATION ABOUT SUBJECTS
 
