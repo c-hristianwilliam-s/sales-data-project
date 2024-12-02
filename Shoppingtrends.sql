@@ -1,3 +1,25 @@
+CREATE TABLE IF NOT EXISTS public.shopping_trends
+(
+    "Customer ID" integer,
+    "Age" integer,
+    "Gender" text,
+    "Item Purchased" text,
+    "Category" text,
+    "Purchase Amount (USD)" integer,
+    "Location" text,
+    "Size" text,
+    "Color" text,
+    "Season" text,
+    "Review Rating" numeric,
+    "Subscription Status" text,
+    "Payment Method" text,
+    "Shipping Type" text,
+    "Discount Applied " text,
+    "Promo Code Used " text,
+    "Previous Purchases " integer,
+    "Preferred Payment Method" text,
+    "Frequency of Purchases" text
+)
 
 
 -- INFORMATION ABOUT SUBJECTS
